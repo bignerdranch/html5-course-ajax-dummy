@@ -6,8 +6,8 @@ JSON resourceful API endpoint for the HTML5 class. There is one resource: a sigh
 Routes
 ------
 
-- `GET /sightings.json` for an array of all sightings
-- `POST /sightings.json` with `application/json` content to create a sighting:
+- `GET /sightings.json` for a JSON array of all sightings.
+- `POST /sightings.json` with `Content-Type: application/json` to create a sighting:
 
 ~~~json
 {
@@ -21,6 +21,6 @@ Routes
 }
 ~~~
 
-- `GET /sightings/:id.json` to get a JSON representation of the sighting with :id.
-- `PUT /sightings/:id.json` to update an existing sighting (same content type and data as `POST`).
-- `DELETE /sightings/:id.json` to destroy sighting with :id.
+- `GET /sightings/:id.json` to get a JSON representation of the sighting with `:id`.
+- `PUT /sightings/:id.json` to update an existing sighting of `:id` (same content type and data as `POST`).
+- `DELETE /sightings/:id.json` to destroy sighting with `:id`.
