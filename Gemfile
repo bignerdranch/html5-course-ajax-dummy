@@ -22,3 +22,9 @@ end
 gem 'rails_12factor', group: :production
 
 gem 'unicorn'
+
+group :development do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
