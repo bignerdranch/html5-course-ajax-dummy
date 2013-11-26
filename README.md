@@ -8,6 +8,7 @@ Routes
 
 - `GET /sightings.json` for an array of all sightings
 - `POST /sightings.json` with `application/json` content to create a sighting:
+
 ~~~json
 {
   "sighting": {
@@ -19,6 +20,7 @@ Routes
   }
 }
 ~~~
+
 - `GET /sightings/:id.json` to get a JSON representation of the sighting with :id.
 - `PUT /sightings/:id.json` to update an existing sighting (same content type and data as `POST`).
 - `DELETE /sightings/:id.json` to destroy sighting with :id.
