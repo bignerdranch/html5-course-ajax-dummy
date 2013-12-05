@@ -24,24 +24,5 @@ module Endpoint
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
-    class Cors
-      def initialize(app)
-        @app = app
-      end
-
-      def call(env)
-        status, headers, response = @app.call(env)
-
-        headers['Access-Control-Allow-Origin'] = '*'
-        headers['Access-Control-Allow-Methods'] = 'POST, PUT, PATCH, DELETE, HEAD, GET, OPTIONS'
-        headers['Access-Control-Request-Method'] = '*'
-        headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-
-        [status, headers, response]
-      end
-    end
-
-    config.middleware.use Cors
   end
 end
